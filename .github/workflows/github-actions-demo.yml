@@ -9,7 +9,7 @@ env:
   ACCESS_KEY_ID: ${{ secrets.ACCESSKEY }}             # set this to your huaweicloud access-key-id
   ACCESS_KEY_SECRET: ${{ secrets.SECRETACCESSKEY }}               # set this to your huaweicloud access-key-secret
   SWR_ORGANIZATION:  qcworkflow   # SWR 组织名
-  IMAGE_NAME: cci-image       # 镜像名称
+  IMAGE_NAME: qc-cci-image       # 镜像名称
             
 jobs:
   deploy_cci:
