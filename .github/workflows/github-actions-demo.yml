@@ -4,12 +4,12 @@ on:
     branches:
        master
 env:
-  REGION_ID: region_id                  # set this to your preferred huaweicloud region, e.g. cn-north-4
-  PROJECT_ID: project_id   # 项目ID，可以在华为云我的凭证获取
+  REGION_ID: cn-north-4                  # set this to your preferred huaweicloud region, e.g. cn-north-4
+  PROJECT_ID: 0dd8cb413000906a2fcdc019b5a84546   # 项目ID，可以在华为云我的凭证获取
   ACCESS_KEY_ID: ${{ secrets.ACCESSKEY }}             # set this to your huaweicloud access-key-id
   ACCESS_KEY_SECRET: ${{ secrets.SECRETACCESSKEY }}               # set this to your huaweicloud access-key-secret
-  SWR_ORGANIZATION:  swr_organization   # SWR 组织名
-  IMAGE_NAME: image_name       # 镜像名称
+  SWR_ORGANIZATION:  qcworkflow   # SWR 组织名
+  IMAGE_NAME: cci-image       # 镜像名称
             
 jobs:
   deploy_cci:
@@ -53,8 +53,8 @@ jobs:
           secret_key: ${{ secrets.SECRETACCESSKEY }}
           project_id: ${{env.PROJECT_ID}}
           region: ${{ env.REGION_ID }}
-          namespace: action-namespace-name
-          deployment: action-deployment-name
+          namespace: qc-cci-workflow
+          deployment: qc-cci-deployment
           image: ${{ steps.build-image.outputs.image }}
 
 
