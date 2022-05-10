@@ -54,7 +54,7 @@ jobs:
           project_id: ${{env.PROJECT_ID}}
           region: ${{ env.REGION_ID }}
           namespace: qc-cci-workflow
-          deployment: qc-cci-deployment
+          deployment: qc-cci-deployment-test
           image: ${{ steps.build-image.outputs.image }}
 
 
